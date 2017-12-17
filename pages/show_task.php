@@ -19,13 +19,22 @@
 
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
-
 print_r($data);
 ?>
+<h6><a href="index.php?page=accounts&action=logout">Logout</a></h6>
+<form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?>" method="get">
+
+    Todo Title/body: <?php echo $data->message; ?><br>
+
+    Todo complete: <?php echo $data->isdone; ?><br>
+    Date created: <?php echo $data->createddate; ?><br>
+    Date updated: <?php echo $data->duedate; ?><br>
+    <button type="submit"><a href="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?>">Edit</a></button>
+</form>
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
-
+<h6><a href="index.php?page=tasks&action=all">Back</a></h6>
 
 
 

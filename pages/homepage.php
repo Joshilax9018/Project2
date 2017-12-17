@@ -1,5 +1,3 @@
-<!doctype html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -15,38 +13,33 @@
     <![endif]-->
 </head>
 
-<body style="width: 100%;">
+<body>
 
 
-<span style="text-align: center;padding-right: 50%;"><h1>
+<h1>
     <?php
     //this how to print some data;
     echo $data['site_name'];
-    ?> </h1></span>
+    ?> </h1>
 
-<!-- <h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
-<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1> -->
-<div style="width: 100%;padding-left: 30%;"> 
-    <div style="width: 100%;padding-left: 40px;">
-        <form action="index.php?page=accounts&action=login" method="POST">
+<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
+<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
 
-            <div class="container">
-                <label><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="email" required><br><br>
+<form action="index.php?page=accounts&action=login" method="POST" align='center'>
 
-                <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required><br><br>
+    <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="email" required><br>
 
-                <div style="float: left;width: 50%;padding-left: 150px;"><button type="submit">Login</button></div>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required><br>
 
-            </div>
-        </form>
+        <button type="submit">Login</button>
     </div>
 
-    <div style="width: 100%;padding-top: 50px;">
-        <div style="border-style: outset; width: 20%;padding-left: 20px;padding-right: 20px;">If you are a new user, please <a href="index.php?page=accounts&action=register">Sign Up!</a> here!</div>
-    </div>
-</div>
+
+</form>
+<h1><a href="index.php?page=accounts&action=register">Register</a></h1>
 
 
 <script src="js/scripts.js"></script>

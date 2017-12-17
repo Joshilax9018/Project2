@@ -24,22 +24,20 @@
 
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
-
 print_r($data);
-
-
 ?>
 
-<form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
+<form action="index.php?page=accounts&action=edit&id=<?php echo $data->id; ?>" method="post">
 
-    First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>"><br>
+    First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>" readonly><br>
 
-    Last name: <input type="text" name="lname" value="<?php echo $data->lname; ?>"><br>
-    Email: <input type="text" name="email" value="<?php echo $data->email; ?>"><br>
-    Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
-    Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"><br>
-    Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>
-    <input type="submit" value="Submit form">
+    Last name: <input type="text" name="lname" value="<?php echo $data->lname; ?>" readonly><br>
+    Email: <input type="text" name="email" value="<?php echo $data->email; ?>" readonly><br>
+    Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>" readonly><br>
+    Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>" readonly><br>
+    Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>" readonly><br>
+    <button type="submit"><a href="index.php?page=accounts&action=edit&id=<?php echo $data->id; ?>">Edit</a></button>
+    <!-- <input type="submit" value="Edit"> -->
 </form>
 
 
@@ -47,6 +45,7 @@ print_r($data);
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
 
+<h6><a href="index.php?page=tasks&action=all">Back</a></h6>
 
 <script src="js/scripts.js"></script>
 </body>

@@ -16,11 +16,7 @@
 <body>
 
 
-<h2>
-    <?php
-    //this how to print some data;
-    echo $data['site_name'];
-    ?> </h2>
+<h2>Welocome To TODO App</h2>
 
 <h3><a href="index.php?page=accounts&action=all">Show All Accounts</a></h3>
 <h3><a href="index.php?page=tasks&action=all">Show All Tasks</a></h3>

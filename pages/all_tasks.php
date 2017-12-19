@@ -17,10 +17,11 @@
 
 <body>
 <?php 
+  session_start();
 	$userID = $_SESSION['userID'];
 ?>
 <div class="header">
-	<h3>Welcome <?php echo $_SESSION["userFname"]; ?></h3>
+	<h3>Welcome</h3> 
 </div>
 <div>
 	<div style="width: 100%;float: right;">

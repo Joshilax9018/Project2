@@ -22,6 +22,7 @@ class accounts extends \database\collection
             } else {
                 return $recordsSet[0];
             }
+    }        
             
             public static function findById($id)
     {
@@ -30,7 +31,7 @@ class accounts extends \database\collection
             $sql = 'SELECT * FROM ' . $tableName . ' WHERE email = ?';
 
          //grab the only record for find one and return as an object
-            $recordsSet = self::getResults($sql, $email);
+            $recordsSet = self::getResults($sql, $id);
 
             if (is_null($recordsSet)) {
                 return FALSE;
